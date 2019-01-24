@@ -3,25 +3,12 @@
         <servlet-name>resteasy-servlet</servlet-name>
         <servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
         <init-param>
-            <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>io.codeleaf.authn.example</param-value>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>io.codeleaf.authn.example.MyApplication</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>resteasy-servlet</servlet-name>
-        <url-pattern>/api/*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>RESTEasy WADL</servlet-name>
-        <servlet-class>org.jboss.resteasy.wadl.ResteasyWadlServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RESTEasy WADL</servlet-name>
-        <url-pattern>/application.xml</url-pattern>
-    </servlet-mapping>
-    <listener>
-        <listener-class>
-            io.codeleaf.auth.example.MyContextListener
-        </listener-class>
-    </listener>
 </web-app>
