@@ -1,14 +1,14 @@
 <web-app>
     <servlet>
-        <servlet-name>resteasy-servlet</servlet-name>
-        <servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+        <servlet-name>jersey-servlet</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>io.codeleaf.authn.example.MyApplication</param-value>
+            <param-value>io.codeleaf.example.MyApplication</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>resteasy-servlet</servlet-name>
+        <servlet-name>jersey-servlet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>
