@@ -10,7 +10,7 @@
         }
       }
     },
-    "default": {
+    "basic": {
       "implementation": "io.codeleaf.authn.jaxrs.basic.BasicAuthenticator",
       "configuration": {
         "type": "io.codeleaf.authn.jaxrs.basic.BasicConfiguration",
@@ -26,7 +26,7 @@
         "admin/*",
         "admin"
       ],
-      "authenticator": "default",
+      "authenticator": "basic",
       "policy": "required"
     },
     "public": {
@@ -34,14 +34,14 @@
         "public/*",
         "public"
       ],
-      "authenticator": "default",
+      "authenticator": "basic",
       "policy": "none"
     },
     "default": {
       "endpoints": [
         "hello"
       ],
-      "authenticator": "default",
+      "authenticator": "basic",
       "policy": "optional"
     }
   }
