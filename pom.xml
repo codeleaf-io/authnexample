@@ -29,7 +29,7 @@
         </dependency>
         <dependency>
             <groupId>io.codeleaf.authn</groupId>
-            <artifactId>authn-jaxrs-spi</artifactId>
+            <artifactId>authn-jaxrs-api</artifactId>
             <version>0.1.0</version>
         </dependency>
         <dependency>

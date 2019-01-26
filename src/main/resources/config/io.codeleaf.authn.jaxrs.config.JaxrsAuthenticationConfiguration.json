@@ -1,0 +1,48 @@
+{
+  "authenticators": {
+    "dummy": {
+      "implementation": "io.codeleaf.authn.password.dummy.DummyAuthenticator",
+      "configuration": {
+        "type": "io.codeleaf.authn.password.dummy.DummyConfiguration",
+        "settings": {
+          "userName": "admin",
+          "password": "12345"
+        }
+      }
+    },
+    "default": {
+      "implementation": "io.codeleaf.authn.jaxrs.basic.BasicAuthenticator",
+      "configuration": {
+        "type": "io.codeleaf.authn.jaxrs.basic.BasicConfiguration",
+        "settings": {
+          "passwordAuthenticator": "dummy"
+        }
+      }
+    }
+  },
+  "zones": {
+    "admin": {
+      "endpoints": [
+        "admin/*",
+        "admin"
+      ],
+      "authenticator": "default",
+      "policy": "required"
+    },
+    "public": {
+      "endpoints": [
+        "public/*",
+        "public"
+      ],
+      "authenticator": "default",
+      "policy": "none"
+    },
+    "default": {
+      "endpoints": [
+        "hello"
+      ],
+      "authenticator": "default",
+      "policy": "optional"
+    }
+  }
+}
