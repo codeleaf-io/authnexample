@@ -57,6 +57,12 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>io.codeleaf.authn</groupId>
+            <artifactId>authn-jaxrs-oauth</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
             <groupId>io.codeleaf.logging</groupId>
             <artifactId>logging-binding-console</artifactId>
             <version>0.1.0</version>

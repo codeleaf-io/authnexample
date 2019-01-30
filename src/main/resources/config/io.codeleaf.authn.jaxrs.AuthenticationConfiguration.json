@@ -18,6 +18,19 @@
           "passwordAuthenticator": "dummy"
         }
       }
+    },
+    "linkedin": {
+      "implementation": "io.codeleaf.authn.jaxrs.oauth.linkedin.LinkedinAuthenticator",
+      "configuration": {
+        "type": "io.codeleaf.authn.jaxrs.oauth.OAuthConfiguration",
+        "settings": {
+          "clientId": "<registered clientId>",
+          "clientSecret": "<registered client secret>",
+          "redirectUri": "<redirection url or landing page after login>",
+          "scope": "r_basicprofile r_emailaddress",
+          "state": "some_params"
+        }
+      }
     }
   },
   "zones": {
@@ -26,8 +39,8 @@
         "admin/*",
         "admin"
       ],
-      "authenticator": "basic",
-      "policy": "required"
+      "authenticator": "linkedin",
+      "policy": "redirect"
     },
     "public": {
       "endpoints": [
