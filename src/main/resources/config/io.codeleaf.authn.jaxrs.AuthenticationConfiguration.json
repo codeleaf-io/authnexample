@@ -20,7 +20,7 @@
       }
     },
     "linkedin": {
-      "implementation": "io.codeleaf.authn.jaxrs.oauth.linkedin.LinkedinAuthenticator",
+      "implementation": "io.codeleaf.authn.jaxrs.oauth.linkedin.LinkedInAuthenticator",
       "configuration": {
         "type": "io.codeleaf.authn.jaxrs.oauth.OAuthConfiguration",
         "settings": {
@@ -47,7 +47,6 @@
         "public/*",
         "public"
       ],
-      "authenticator": "basic",
       "policy": "none"
     },
     "default": {
