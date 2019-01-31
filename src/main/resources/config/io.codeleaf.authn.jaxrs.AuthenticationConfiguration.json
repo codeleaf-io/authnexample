@@ -24,9 +24,9 @@
       "configuration": {
         "type": "io.codeleaf.authn.jaxrs.oauth.OAuthConfiguration",
         "settings": {
-          "clientId": "<registered clientId>",
-          "clientSecret": "<registered client secret>",
-          "redirectUri": "<redirection url or landing page after login>",
+          "clientId": "<>",
+          "clientSecret": "<>",
+          "redirectUri": "http://codeleaf:8081/auth/linkedin",
           "scope": "r_basicprofile r_emailaddress",
           "state": "some_params"
         }
@@ -40,7 +40,7 @@
         "admin"
       ],
       "authenticator": "linkedin",
-      "policy": "redirect"
+      "policy": "required"
     },
     "public": {
       "endpoints": [
