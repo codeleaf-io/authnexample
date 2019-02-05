@@ -26,9 +26,10 @@
         "settings": {
           "clientId": "<>",
           "clientSecret": "<>",
-          "redirectUri": "http://codeleaf:8081/auth/linkedin",
-          "scope": "r_basicprofile r_emailaddress",
-          "state": "some_params"
+          "redirectUri": "http://codeleaf.com:8081/auth/linkedin",
+          "scope": "r_basicprofile w_share rw_company_admin w_member_social r_emailaddress",
+          "state": "some_params",
+          "landingPageUrl": "http://codeleaf.com"
         }
       }
     }

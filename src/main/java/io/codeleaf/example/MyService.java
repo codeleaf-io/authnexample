@@ -57,6 +57,6 @@ public class MyService {
     @Path("/admin")
     public String getHelloWorldAdmin() {
         System.out.println("hello admin!!");
-        return securityContext.getUserPrincipal().getName();
+        return "Welcome admin " + securityContext.getUserPrincipal().getName();
     }
 }
