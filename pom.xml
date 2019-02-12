@@ -46,7 +46,7 @@
         </dependency>
         <dependency>
             <groupId>io.codeleaf.authn</groupId>
-            <artifactId>authn-jaxrs-basic</artifactId>
+            <artifactId>authn-jaxrs-authenticator-basic</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
@@ -58,7 +58,13 @@
         </dependency>
         <dependency>
             <groupId>io.codeleaf.authn</groupId>
-            <artifactId>authn-jaxrs-oauth</artifactId>
+            <artifactId>authn-jaxrs-protocol-query</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.codeleaf.authn</groupId>
+            <artifactId>authn-jaxrs-authenticator-oauth</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
