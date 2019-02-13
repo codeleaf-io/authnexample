@@ -10,13 +10,22 @@
         }
       }
     },
-    "default": {
+    "basic": {
       "implementation": "io.codeleaf.authn.jaxrs.basic.BasicAuthenticator",
       "configuration": {
         "type": "io.codeleaf.authn.jaxrs.basic.BasicConfiguration",
         "settings": {
           "passwordAuthenticator": "dummy",
-          "form": "true"
+          "prompt": "true"
+        }
+      }
+    },
+    "default": {
+      "implementation": "io.codeleaf.authn.jaxrs.jwt.JwtAuthenticator",
+      "onFailure": "basic",
+      "configuration": {
+        "type": "io.codeleaf.authn.jaxrs.jwt.JwtConfiguration",
+        "settings": {
         }
       }
     }
