@@ -28,11 +28,6 @@
             <version>1.7.25</version>
         </dependency>
         <dependency>
-            <groupId>io.codeleaf.authn</groupId>
-            <artifactId>authn-jaxrs-api</artifactId>
-            <version>0.1.0</version>
-        </dependency>
-        <dependency>
             <groupId>io.codeleaf.logging</groupId>
             <artifactId>logging-core</artifactId>
             <version>0.1.0</version>
@@ -47,6 +42,12 @@
         <dependency>
             <groupId>io.codeleaf.authn</groupId>
             <artifactId>authn-jaxrs-authenticator-basic</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.codeleaf.authn</groupId>
+            <artifactId>authn-jaxrs-authenticator-jwt</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
@@ -97,6 +98,12 @@
             <artifactId>resteasy-jaxrs</artifactId>
             <version>3.6.2.Final</version>
         </dependency>
+        <dependency>
+            <groupId>io.codeleaf.authn</groupId>
+            <artifactId>authn-jaxrs-api</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
