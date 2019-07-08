@@ -1,85 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project>
+
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.codeleaf.release</groupId>
+        <artifactId>release</artifactId>
+        <version>0.1.0</version>
+    </parent>
 
     <groupId>io.codeleaf.example</groupId>
     <artifactId>example</artifactId>
     <version>0.1.0</version>
+    <packaging>pom</packaging>
 
-    <packaging>war</packaging>
+    <modules>
+        <module>logic</module>
+        <module>war</module>
+        <module>docker</module>
+        <module>run</module>
+    </modules>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.authn</groupId>
-            <artifactId>authn-jaxrs-api</artifactId>
-            <version>0.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.logging</groupId>
-            <artifactId>logging-core</artifactId>
-            <version>0.1.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.glassfish.jersey.bundles</groupId>
-            <artifactId>jaxrs-ri</artifactId>
-            <version>2.27</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.authn</groupId>
-            <artifactId>authn-jaxrs-basic</artifactId>
-            <version>${project.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.authn</groupId>
-            <artifactId>authn-password-dummy</artifactId>
-            <version>${project.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.logging</groupId>
-            <artifactId>logging-binding-console</artifactId>
-            <version>0.1.0</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.logging</groupId>
-            <artifactId>logging-binding-slf4j</artifactId>
-            <version>0.1.0</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.logging</groupId>
-            <artifactId>logging-writer-console</artifactId>
-            <version>0.1.0</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.codeleaf.config</groupId>
-            <artifactId>config-json</artifactId>
-            <version>0.1.0</version>
-            <scope>runtime</scope>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.codeleaf.release</groupId>
+                <artifactId>release-deps</artifactId>
+                <version>0.1.0</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

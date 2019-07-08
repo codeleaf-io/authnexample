@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+
+  example:
+    image: example-docker
+    hostname: example
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"

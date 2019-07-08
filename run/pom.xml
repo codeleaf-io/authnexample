@@ -1,0 +1,15 @@
+<project>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.codeleaf.build</groupId>
+        <artifactId>build-docker-run</artifactId>
+        <version>0.1.0</version>
+    </parent>
+
+    <groupId>io.codeleaf.example</groupId>
+    <artifactId>example-run</artifactId>
+    <version>0.1.0</version>
+
+</project>
